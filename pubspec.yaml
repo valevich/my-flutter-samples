@@ -13,6 +13,8 @@ dependencies:
   http: any
   circle_wheel_scroll: ^0.0.1+1
   cached_network_image: ^2.0.0
+  url_launcher: ^4.0.3
+  shared_preferences: ^0.4.3
 
 dev_dependencies:
   flutter_test:

@@ -5,12 +5,18 @@ import 'package:flutter_samples/appbar_sliverappbar/main_appbar_sliverappbar.dar
 import 'package:flutter_samples/collapsing_toolbar/main_collapsing_toolbar.dart';
 import 'package:flutter_samples/communication_widgets/main_communication_widgets.dart';
 import 'package:flutter_samples/fetch_data/main_fetch_data.dart';
+import 'package:flutter_samples/filterList/Example1.dart';
 import 'package:flutter_samples/hero_animations/main_hero_animations.dart';
+import 'package:flutter_samples/managingFavoritesInSharedPreferences/Example2.dart';
+import 'package:flutter_samples/managingInputsWithinModalBottomsheet/Example3.dart';
 import 'package:flutter_samples/menu_navigations/main_menu_navigations.dart';
 import 'package:flutter_samples/persistent_tabbar/main_persistent_tabbar.dart';
 import 'package:flutter_samples/scroll_controller/main_scroll_controller.dart';
 import 'package:flutter_samples/size_and_position/main_size_and_position.dart';
 import 'package:flutter_samples/split_image/main_split_image.dart';
+import 'json/mainfetchdata1.dart';
+import 'json/mainfetchdata2.dart';
+import 'json/mainfetchdata3.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -130,6 +136,42 @@ class MyAppState extends State<MyApp> {
               title: "Menu Navigations",
               actionTap: () {
                 onButtonTap(MainMenuNavigations());
+              },
+            ),
+            MyMenuButton(
+              title: "JSON Read Example 1",
+              actionTap: () {
+                onButtonTap(MainFetchData1());
+              },
+            ),
+            MyMenuButton(
+              title: "JSON Read Example 2",
+              actionTap: () {
+                onButtonTap(MainFetchData2());
+              },
+            ),
+            MyMenuButton(
+              title: "JSON Read Example 3",
+              actionTap: () {
+                onButtonTap(MainFetchData3());
+              },
+            ),
+            MyMenuButton(
+              title: "Filter JSON",
+              actionTap: () {
+                onButtonTap(Example1());
+              },
+            ),
+            MyMenuButton(
+              title: "Save Favorites",
+              actionTap: () {
+                onButtonTap(Example2());
+              },
+            ),
+            MyMenuButton(
+              title: "Checkboxes Radiobuttons",
+              actionTap: () {
+                onButtonTap(Example3());
               },
             ),
           ],
