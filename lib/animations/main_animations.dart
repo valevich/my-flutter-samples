@@ -7,7 +7,6 @@ import 'package:flutter_samples/animations/menu_exploration/main_menu_exploratio
 import 'package:flutter_samples/animations/split_widget/main_split_widget.dart';
 import 'package:flutter_samples/animations/turn_on_the_light/turn_on_the_light.dart';
 import 'package:flutter_samples/main.dart';
-
 import 'custom_sliverheader/custom_sliver_header.dart';
 import 'hide_my_widgets/main_hide_my_widgets.dart';
 import 'shrink_top_list/shrink_top_list_page.dart';
@@ -21,7 +20,8 @@ class MainAnimations extends StatefulWidget {
 
 class MainAnimationsState extends State<MainAnimations> {
   onButtonTap(Widget page) {
-    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => page));
+    Navigator.push(
+        context, MaterialPageRoute(builder: (BuildContext context) => page));
   }
 
   @override
