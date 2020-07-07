@@ -2,18 +2,18 @@ import 'DefaultAppBar.dart';
 import 'Car.dart';
 import 'package:flutter/material.dart';
 
-class Example1 extends StatefulWidget {
-  Example1();
+class JsonExample1 extends StatefulWidget {
+  JsonExample1();
 
   final String title = "Filtering List";
   final String exampleUrl =
       "https://github.com/Ephenodrom/FlutterAdvancedExamples/tree/master/lib/examples/filterList";
 
   @override
-  _Example1State createState() => _Example1State();
+  _JsonExample1State createState() => _JsonExample1State();
 }
 
-class _Example1State extends State<Example1> {
+class _JsonExample1State extends State<JsonExample1> {
   List<Car> initialList = Car.cars;
   List<Car> currentList = [];
 

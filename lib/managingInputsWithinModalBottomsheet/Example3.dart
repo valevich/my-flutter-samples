@@ -1,4 +1,3 @@
-import '../filterList/DefaultAppBar.dart';
 import 'package:flutter/material.dart';
 
 class Example3 extends StatefulWidget {
@@ -26,7 +25,9 @@ class _Example3State extends State<Example3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: DefaultAppBar(widget.title, widget.exampleUrl),
+      appBar: AppBar(
+        title: Text("Managing Inputs"),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

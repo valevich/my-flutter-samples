@@ -1,4 +1,3 @@
-import '../filterList/DefaultAppBar.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -34,7 +33,9 @@ class _Example2State extends State<Example2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: DefaultAppBar(widget.title, widget.exampleUrl),
+      appBar: AppBar(
+        title: Text("Favorites Example"),
+      ),
       body: Container(
         child: ListView.builder(
             // Let the ListView know how many items it needs to build
