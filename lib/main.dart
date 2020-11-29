@@ -13,6 +13,7 @@ import 'package:flutter_samples/persistent_tabbar/main_persistent_tabbar.dart';
 import 'package:flutter_samples/scroll_controller/main_scroll_controller.dart';
 import 'package:flutter_samples/size_and_position/main_size_and_position.dart';
 import 'package:flutter_samples/split_image/main_split_image.dart';
+import 'package:flutter_samples/ui/main_ui.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -45,12 +46,56 @@ class MyAppState extends State<MyApp> {
         padding: EdgeInsets.all(15.0),
         child: ListView(
           children: <Widget>[
-            MyMenuButton(
+            MyGroupButton(
               title: "Fetch Data JSON",
               actionTap: () {
                 onButtonTap(
                   MainJson(),
                 );
+              },
+            ),
+            MyGroupButton(
+              title: "UI Examples",
+              actionTap: () {
+                onButtonTap(
+                  MainUI(),
+                );
+              },
+            ),
+            MyGroupButton(
+              title: "ScrollController and ScrollNotification",
+              actionTap: () {
+                onButtonTap(
+                  MainScrollController(),
+                );
+              },
+            ),
+            MyGroupButton(
+              title: "Apps Clone",
+              actionTap: () {
+                onButtonTap(
+                  MainAppsClone(),
+                );
+              },
+            ),
+            MyGroupButton(
+              title: "Animations",
+              actionTap: () {
+                onButtonTap(
+                  MainAnimations(),
+                );
+              },
+            ),
+            MyGroupButton(
+              title: "Custom AppBar & SliverAppBar",
+              actionTap: () {
+                onButtonTap(MainAppBarSliverAppBar());
+              },
+            ),
+            MyGroupButton(
+              title: "Menu Navigations",
+              actionTap: () {
+                onButtonTap(MainMenuNavigations());
               },
             ),
             MyMenuButton(
@@ -85,30 +130,6 @@ class MyAppState extends State<MyApp> {
               },
             ),
             MyMenuButton(
-              title: "ScrollController and ScrollNotification",
-              actionTap: () {
-                onButtonTap(
-                  MainScrollController(),
-                );
-              },
-            ),
-            MyMenuButton(
-              title: "Apps Clone",
-              actionTap: () {
-                onButtonTap(
-                  MainAppsClone(),
-                );
-              },
-            ),
-            MyMenuButton(
-              title: "Animations",
-              actionTap: () {
-                onButtonTap(
-                  MainAnimations(),
-                );
-              },
-            ),
-            MyMenuButton(
               title: "Communication Widgets",
               actionTap: () {
                 onButtonTap(
@@ -120,18 +141,6 @@ class MyAppState extends State<MyApp> {
               title: "Split Image",
               actionTap: () {
                 onButtonTap(MainSplitImage());
-              },
-            ),
-            MyMenuButton(
-              title: "Custom AppBar & SliverAppBar",
-              actionTap: () {
-                onButtonTap(MainAppBarSliverAppBar());
-              },
-            ),
-            MyMenuButton(
-              title: "Menu Navigations",
-              actionTap: () {
-                onButtonTap(MainMenuNavigations());
               },
             ),
             MyMenuButton(
@@ -166,6 +175,27 @@ class MyMenuButton extends StatelessWidget {
       child: MaterialButton(
         height: 50.0,
         color: Theme.of(context).primaryColor,
+        textColor: Colors.white,
+        child: new Text(title),
+        onPressed: actionTap,
+      ),
+    );
+  }
+}
+
+class MyGroupButton extends StatelessWidget {
+  final String title;
+  final VoidCallback actionTap;
+
+  MyGroupButton({this.title, this.actionTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(15.0),
+      child: MaterialButton(
+        height: 50.0,
+        color: Colors.blueGrey,
         textColor: Colors.white,
         child: new Text(title),
         onPressed: actionTap,

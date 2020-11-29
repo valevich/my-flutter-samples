@@ -16,19 +16,19 @@ class _MainSplitImageState extends State<MainSplitImage> {
     final assetImage =
         AssetImage("images/characters/broly.png", bundle: rootBundle);
     final imageKey = await assetImage.obtainKey(ImageConfiguration());
-    final DecoderCallback decodeResize =
-        (Uint8List bytes, {int cacheWidth, int cacheHeight}) {
-      return ui.instantiateImageCodec(bytes,
-          targetHeight: cacheHeight, targetWidth: cacheWidth);
-    };
-    var load = assetImage.load(imageKey, decodeResize);
+    // final DecoderCallback decodeResize =
+    //     (Uint8List bytes, {int cacheWidth, int cacheHeight}) {
+    //   return ui.instantiateImageCodec(bytes,
+    //       targetHeight: cacheHeight, targetWidth: cacheWidth);
+    // };
+    // var load = assetImage.load(imageKey, decodeResize);
 
     ImageStreamListener listener = ImageStreamListener((info, err) async {
       setState(() {
         _image = info.image;
       });
     });
-    load.addListener(listener);
+    // load.addListener(listener);
   }
 
   _reset() {

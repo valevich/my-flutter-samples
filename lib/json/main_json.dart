@@ -4,6 +4,7 @@ import 'package:flutter_samples/json/filterList/JsonExample1.dart';
 import 'package:flutter_samples/json/mainfetchdata1.dart';
 import 'package:flutter_samples/json/mainfetchdata2.dart';
 import 'package:flutter_samples/json/mainfetchdata3.dart';
+import 'package:flutter_samples/json/mainfetchdata4.dart';
 import 'package:flutter_samples/main.dart';
 
 class MainJson extends StatefulWidget {
@@ -51,6 +52,12 @@ class MainJsonState extends State<MainJson> {
               title: "JSON Read Example 3",
               actionTap: () {
                 onButtonTap(MainFetchData3());
+              },
+            ),
+            MyMenuButton(
+              title: "JSON Read Example 4",
+              actionTap: () {
+                onButtonTap(MainFetchData4());
               },
             ),
             MyMenuButton(
